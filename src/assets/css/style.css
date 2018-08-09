@@ -3,15 +3,19 @@ body {
 }
 
 h2 {
+    word-wrap: break-word;
     font-size: 4rem;
     margin: 0;
 }
 h4 {
     font-size: 1.5rem;
+    word-wrap: break-word;
 }
 
 #small-logo {
-    background: url("https://ralabs.org/wp-content/uploads/2018/01/blackonwhite-transparent.png");
+    background: url("../img/logo.jpg");
+    -webkit-filter: invert(1);
+    filter: invert(1);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -26,7 +30,16 @@ h4 {
 }
 
 .qr-icon {
-    background: url("https://ralabs.org/wp-content/uploads/2018/01/blackonwhite-transparent.png");
+    background: url("../img/qrcode.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 2rem;
+    width: 100%;
+}
+
+.back-icon {
+    background: url("../img/arrow_back.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -41,7 +54,8 @@ h4 {
 }
 
 .header #small-logo {
-    height: 64px;
+    height: 38px;
+    margin-top: 12px;
     width: 100%;
 }
 
@@ -58,25 +72,16 @@ h4 {
 }
 
 .scanner {
-  margin-top: 35px;
+  margin: 2px 0;
   -webkit-filter: invert(1);
   filter: invert(1);
   opacity: 0.4;
-  height: 95vh;
+  height: calc(100vh - 68px);
   width: 100%;
 }
 
-.scanner-result {
+.home-page, .scanner-result {
   background-color: white;
   height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.scanner-result__text {
-  text-align: center;
-  color: green;
-  font-size: 16px;
-  height: 30px;
+  width: 100vw;
 }
