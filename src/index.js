@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, Route } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
 import { createHashHistory } from 'history';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import configureStore from './core/store/configureStore';
 import App from './components/App';
+
 import './assets/css/style.css';
 
 injectTapEventPlugin();

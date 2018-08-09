@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import Header from './layout/Header';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
 import Routes from '../routes';
 
 
