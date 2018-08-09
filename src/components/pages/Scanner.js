@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import autoBind from 'react-autobind';
 import { connect } from 'react-redux';
-import background from '../../assets/img/camera.png';
+
+import FlatButton from 'material-ui/FlatButton';
+import { Link } from 'react-router-dom';
+
 import { setData, resetData } from '../../core/actions/qrData';
+
+import background from '../../assets/img/camera.png';
 
 class Scanner extends Component {
   constructor(props) {
@@ -27,7 +32,8 @@ class Scanner extends Component {
     }
   }
   render() {
-    const alreadyHasData = !!this.props.data.length;
+    let alreadyHasData = !!this.props.data.length;
+
     return (
       <div>
           <div>
@@ -36,7 +42,18 @@ class Scanner extends Component {
             }
             {alreadyHasData &&
               <div className="scanner-result">
-                <div className="scanner-result__text">{this.props.data}</div>
+                <div className="center-block">
+                  <h4 className="big-mrg-bottom">{this.props.data}</h4>
+
+                  <FlatButton
+                    backgroundColor="#000"
+                    hoverColor="#000"
+                  >
+                    <Link to="/">
+                      <div className="icon back-icon"></div>
+                    </Link>
+                  </FlatButton>
+                </div>
               </div>
             }
           </div>
