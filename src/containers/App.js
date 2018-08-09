@@ -39,7 +39,7 @@ export class App extends Component {
   render() {
     return (
       <div style={{ height: "100vh"}}>
-        <Routes/>
+        <Routes />
       </div>
       // <MuiThemeProvider muiTheme={getMuiTheme()}>
       //   <div style={{height: '100vh'}}>
