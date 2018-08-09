@@ -38,19 +38,23 @@ export class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme()}>
-        <div style={{height: '100vh'}}>
-          <AppBar title="Example"
-                  className="app-bar"
-                  style={{position: 'fixed', top: '0'}}
-                  onLeftIconButtonTouchTap= {this.openDrawer} />
+      <div style={{ height: "100vh"}}>
+        <Routes/>
+      </div>
+      // <MuiThemeProvider muiTheme={getMuiTheme()}>
+      //   <div style={{height: '100vh'}}>
+      //     {/* <AppBar title="Example"
+      //             className="app-bar"
+      //             style={{position: 'fixed', top: '0'}}
+      //             onLeftIconButtonTouchTap= {this.openDrawer} /> */}
 
-          <Paper style={{marginTop: '64px', height: '100%'}}>
-            <Routes/>
-          </Paper>
+      //     {/* <Paper style={{marginTop: '64px', height: '100%'}}>
+            
+      //     </Paper> */}
+          
 
-        </div>
-      </MuiThemeProvider>
+      //   </div>
+      // </MuiThemeProvider>
     );
   }
 }

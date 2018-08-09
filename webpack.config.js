@@ -20,7 +20,7 @@ const common = {
     loaders: [
       {
         test: /\.css$/,
-        loaders: ['style', 'css?url=false'],
+        loaders: ['style-loader', 'css-loader'],
         include: PATHS.src,
       },
       {

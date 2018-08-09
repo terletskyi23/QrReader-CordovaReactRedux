@@ -13,7 +13,7 @@
     <preference name="target-device" value="universal" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="detect-data-types" value="true" />
-    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-minSdkVersion" value="19" />
     <preference name="android-installLocation" value="auto" />
     <platform name="android">
     </platform>
@@ -56,7 +56,7 @@
             </array>
         </config-file>
     </platform>
+    <plugin name="cordova-plugin-qrscanner" spec="^2.6.0" />
     <engine name="android" spec="^7.1.1" />
     <engine name="ios" spec="^4.5.5" />
-    <plugin name="cordova-plugin-qrscanner" spec="^2.6.0" />
 </widget>
