@@ -1,8 +1,8 @@
-import React              from 'react'
-import { Switch, Route }  from 'react-router-dom'
-import Home               from './containers/Home'
-import Item1              from './containers/Item1'
-import Item2              from './containers/Item2'
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Home from './containers/Home';
+import Item1 from './containers/Item1';
+import Item2 from './containers/Item2';
 
 const Routes = () => {
   return (
@@ -12,6 +12,6 @@ const Routes = () => {
       <Route path="/item2" component={Item2} />
     </Switch>
   )
-}
+};
 
-export default Routes
+export default Routes;

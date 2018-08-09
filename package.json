@@ -5,6 +5,9 @@
   "dependencies": {
     "classnames": "^2.2.3",
     "cordova-android": "^7.1.1",
+    "cordova-ios": "^4.5.5",
+    "cordova-plugin-add-swift-support": "^1.7.2",
+    "cordova-plugin-qrscanner": "^2.6.0",
     "material-design-icons": "^3.0.1",
     "material-ui": "^0.19.0",
     "moment": "^2.18.1",
@@ -59,7 +62,11 @@
   "license": "none specified",
   "cordova": {
     "platforms": [
-      "android"
-    ]
+      "android",
+      "ios"
+    ],
+    "plugins": {
+      "cordova-plugin-qrscanner": {}
+    }
   }
 }
