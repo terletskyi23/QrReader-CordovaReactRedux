@@ -2,6 +2,24 @@ body {
     background: none transparent !important;
 }
 
+#small-logo {
+    background: url("https://ralabs.org/wp-content/uploads/2018/01/blackonwhite-transparent.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.app-bar.header {
+    position: fixed;
+    top: 0;
+    background-color: #000;
+}
+
+.header #small-logo {
+    height: 64px;
+    width: 100%;
+}
+
 .scanner {
     background: none transparent !important;
     margin-top: 20vh;

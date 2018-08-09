@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import Header from './layout/Header';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
-import Paper from 'material-ui/Paper';
 import Routes from '../routes';
 
 
@@ -36,23 +35,16 @@ export class App extends Component {
 
   render() {
     return (
-      <div style={{ height: "100vh"}}>
-        <Routes />
-      </div>
-      // <MuiThemeProvider muiTheme={getMuiTheme()}>
-      //   <div style={{height: '100vh'}}>
-      //     {/* <AppBar title="Example"
-      //             className="app-bar"
-      //             style={{position: 'fixed', top: '0'}}
-      //             onLeftIconButtonTouchTap= {this.openDrawer} /> */}
-
-      //     {/* <Paper style={{marginTop: '64px', height: '100%'}}>
-
-      //     </Paper> */}
-
-
-      //   </div>
-      // </MuiThemeProvider>
+      <MuiThemeProvider muiTheme={getMuiTheme()}>
+        <div style={{height: '100vh'}}>
+          <Header/>
+          {/*<AppBar title={<div id="logo"></div>}*/}
+                  {/*className="app-bar"*/}
+                  {/*style={{position: 'fixed', top: '0', backgroundColor: "#000"}}*/}
+                  {/*showMenuIconButton={false} />*/}
+          <Routes/>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
