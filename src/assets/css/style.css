@@ -1,0 +1,11 @@
+body {
+    background: none transparent !important;
+}
+
+.scanner {
+    background: none transparent !important;
+    margin-top: 20vh;
+    margin: auto;
+    height: 50vw;
+    width: 50vw;
+}

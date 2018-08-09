@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-const Item2 = () => {
+const Scanner = () => {
   return (
     <div>
-      <h1>Item2</h1>
+      <h1>Scanner</h1>
     </div>
   )
 };
 
-export default Item2;
+export default Scanner;

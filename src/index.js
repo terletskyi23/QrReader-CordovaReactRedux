@@ -6,8 +6,8 @@ import { ConnectedRouter } from 'react-router-redux';
 import { createHashHistory } from 'history';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import configureStore from './core/store/configureStore';
-import App from './containers/App';
-import './style.css';
+import App from './components/App';
+import './assets/css/style.css';
 
 injectTapEventPlugin();
 
