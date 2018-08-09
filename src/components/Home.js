@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 function displayContents(err, text){
-  if(err){
+  if(err) {
     alert(JSON.stringify(err));
   } else {
     // The scan completed, display the contents of the QR code:
@@ -20,9 +20,12 @@ class Home extends Component {
     return (
       <div>
         <h1>Home none transparent</h1>
+        <div className="scanner">
+
+        </div>
       </div>
     );
   }
-};
+}
 
 export default Home;
