@@ -4,14 +4,14 @@ import { createLogger } from 'redux-logger';
 import rootReducer from '../reducers';
 
 const logger = createLogger({
-  collapsed: true
+  collapsed: true,
 });
 
-const configureStore = preloadedState => {
+const configureStore = (preloadedState) => {
   const store = createStore(
     rootReducer,
     preloadedState,
-    applyMiddleware(thunk, logger)
+    applyMiddleware(thunk, logger),
   );
 
   if (module.hot) {
