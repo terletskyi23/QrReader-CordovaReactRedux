@@ -26,33 +26,21 @@ export class App extends Component {
     }
   }
 
-  openDrawer=() => {
-    this.props.actions.ui.openDrawer()
-  };
-
-  closeDrawer=() => {
-    this.props.actions.ui.closeDrawer()
-  };
-
   render() {
     return (
-      <div style={{ height: "100vh"}}>
-        <Routes />
-      </div>
-      // <MuiThemeProvider muiTheme={getMuiTheme()}>
-      //   <div style={{height: '100vh'}}>
-      //     {/* <AppBar title="Example"
-      //             className="app-bar"
-      //             style={{position: 'fixed', top: '0'}}
-      //             onLeftIconButtonTouchTap= {this.openDrawer} /> */}
+      // <div style={{ height: "100vh"}}>
+        
+      // </div>
+      <MuiThemeProvider muiTheme={getMuiTheme()}>
+        <div style={{height: '100vh'}}>
+          <AppBar title="Example"
+                  className="app-bar"
+                  style={{position: 'fixed', top: '0'}}
+                  />
+                  <Routes />
 
-      //     {/* <Paper style={{marginTop: '64px', height: '100%'}}>
-
-      //     </Paper> */}
-
-
-      //   </div>
-      // </MuiThemeProvider>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
