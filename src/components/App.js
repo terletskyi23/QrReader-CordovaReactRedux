@@ -24,23 +24,11 @@ export class App extends Component {
     }
   }
 
-  openDrawer=() => {
-    this.props.actions.ui.openDrawer()
-  };
-
-  closeDrawer=() => {
-    this.props.actions.ui.closeDrawer()
-  };
-
   render() {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <div style={{height: '100vh'}}>
           <Header/>
-          {/*<AppBar title={<div id="logo"></div>}*/}
-                  {/*className="app-bar"*/}
-                  {/*style={{position: 'fixed', top: '0', backgroundColor: "#000"}}*/}
-                  {/*showMenuIconButton={false} />*/}
           <Routes/>
         </div>
       </MuiThemeProvider>

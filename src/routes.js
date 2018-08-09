@@ -7,7 +7,7 @@ import Result from './components/pages/Result';
 const Routes = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={Scanner} />
       <Route path="/scanner" component={Scanner} />
       <Route path="/result" component={Result} />
       <Route component={Home} />
