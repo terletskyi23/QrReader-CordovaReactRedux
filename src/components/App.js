@@ -8,8 +8,6 @@ import AppBar from 'material-ui/AppBar';
 import Paper from 'material-ui/Paper';
 import Routes from '../routes';
 
-/* actions */
-import * as uiActionCreators from '../core/actions/actions-ui';
 
 const styles = {
   backgroundStyle: {
@@ -39,7 +37,7 @@ export class App extends Component {
   render() {
     return (
       <div style={{ height: "100vh"}}>
-        <Routes/>
+        <Routes />
       </div>
       // <MuiThemeProvider muiTheme={getMuiTheme()}>
       //   <div style={{height: '100vh'}}>
@@ -60,14 +58,9 @@ export class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  ui: state.ui,
-  routing: state.routing
 });
 
 const mapDispatchToProps = dispatch => ({
-  actions: {
-    ui: bindActionCreators(uiActionCreators, dispatch)
-  }
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
