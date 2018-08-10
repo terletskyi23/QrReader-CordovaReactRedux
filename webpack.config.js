@@ -20,13 +20,17 @@ const common = {
     loaders: [
       {
         test: /\.css$/,
-        loaders: ['style', 'css?url=false'],
+        loaders: ['style-loader', 'css-loader'],
         include: PATHS.src,
       },
       {
         test: /\.js$/,
         loader: 'babel-loader?cacheDirectory',
         include: PATHS.src,
+      },
+      {
+        test: /\.(gif|svg|jpg|png)$/,
+        loader: "file-loader",
       }
     ]
   }

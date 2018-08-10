@@ -1,10 +1,10 @@
-import { combineReducers } from 'redux'
-import { uiReducer }       from './reducer-ui'
-import { routerReducer }   from 'react-router-redux'
+import { combineReducers } from 'redux';
+import { routerReducer } from 'react-router-redux';
+import qrDataReducer from './qrData';
 
 const rootReducer = combineReducers({
-  ui: uiReducer,
-  routing: routerReducer
-})
+  qrData: qrDataReducer,
+  routing: routerReducer,
+});
 
-export default rootReducer
+export default rootReducer;
