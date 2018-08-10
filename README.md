@@ -1,4 +1,5 @@
-# React Redux Cordova boilerplate
+# QR Scanner
+### React Redux Cordova
 
 ```
 npm install
