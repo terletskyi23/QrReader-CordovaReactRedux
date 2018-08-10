@@ -38,6 +38,13 @@
     "babel-register": "^6.9.0",
     "css-loader": "^0.28.0",
     "elementtree": "^0.1.6",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.10.0",
     "file-loader": "^1.1.11",
     "keymirror": "^0.1.1",
     "react-dom": "^15.4.1",
@@ -58,7 +65,8 @@
     "prepare": "node config && webpack && cordova prepare",
     "build": "node config && webpack && cordova build",
     "start": "node config && HOST=0.0.0.0 webpack-dev-server",
-    "test": "echo \"No tests (yet!) -- submit a PR?\" && exit 0"
+    "test": "echo \"No tests (yet!) -- submit a PR?\" && exit 0",
+    "lint": "./node_modules/.bin/eslint ./src"
   },
   "keywords": [],
   "author": "none specified",

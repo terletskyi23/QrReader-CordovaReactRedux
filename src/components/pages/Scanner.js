@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import autoBind from 'react-autobind';
 import { connect } from 'react-redux';
 
@@ -9,7 +9,7 @@ import { setData, resetData } from '../../core/actions/qrData';
 
 import background from '../../assets/img/camera.png';
 
-class Scanner extends Component {
+class Scanner extends React.Component {
   constructor(props) {
     super(props);
     autoBind(this);
@@ -19,44 +19,46 @@ class Scanner extends Component {
     QRScanner.scan(this.scannerHandler);
     QRScanner.show();
   }
+
   componentWillUnmount() {
     this.props.resetData();
     QRScanner.destroy();
   }
 
   scannerHandler(err, text) {
-    if(err) {
+    if (err) {
       alert(JSON.stringify(err));
     } else {
       QRScanner.destroy(() => this.props.setData(text));
     }
   }
+
   render() {
-    let alreadyHasData = !!this.props.data.length;
+    const alreadyHasData = !!this.props.data.length;
 
     return (
       <div>
-          <div>
-            {!alreadyHasData &&
-              <img className="scanner" src={background} />
-            }
-            {alreadyHasData &&
-              <div className="scanner-result">
-                <div className="center-block">
-                  <h4 className="big-mrg-bottom">{this.props.data}</h4>
+        <div>
+          {!alreadyHasData &&
+            <img className="scanner" src={background} alt="layout" />
+          }
+          {alreadyHasData &&
+            <div className="scanner-result">
+              <div className="center-block">
+                <h4 className="big-mrg-bottom">{this.props.data}</h4>
 
-                  <FlatButton
-                    backgroundColor="#000"
-                    hoverColor="#000"
-                  >
-                    <Link to="/">
-                      <div className="icon back-icon"></div>
-                    </Link>
-                  </FlatButton>
-                </div>
+                <FlatButton
+                  backgroundColor="#000"
+                  hoverColor="#000"
+                >
+                  <Link to="/">
+                    <div className="icon back-icon" />
+                  </Link>
+                </FlatButton>
               </div>
-            }
-          </div>
+            </div>
+          }
+        </div>
       </div>
     );
   }
